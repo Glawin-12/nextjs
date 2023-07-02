@@ -9,7 +9,7 @@ let cartData = [];
 function ItemCard({ itemId, imgSrc, name, price, ratings }) {
   const [currentValue, setCurrentValue] = useState(Math.floor(ratings));
   const [isFavourite, setFavourite] = useState(false);
-  const [{}, dispatch] = useStateValue();
+  const [ dispatch] = useStateValue();
   const [isCart, setCart] = useState(null);
 
   useEffect(() => {
