@@ -12,15 +12,15 @@ function ItemCard({ itemId, imgSrc, name, price, ratings }) {
   const [ dispatch] = useStateValue();
   const [isCart, setCart] = useState(null);
 
-  // useEffect(() => {
-  //   if (isCart) {
-  //     cartData.push(isCart);
-  //     dispatch({                                    //add items to the right menu
-  //       type: actionType.SET_CART,
-  //       cart: cartData,
-  //     });
-  //   }
-  // }, [isCart]);
+  useEffect(() => {
+    if (isCart) {
+      cartData.push(isCart);
+      dispatch({                                    //add items to the right menu
+        type: actionType.SET_CART,
+        cart: cartData,
+      });
+    }
+  }, [isCart]);
 
   const handleClick = (value) => {
     setCurrentValue(value);
