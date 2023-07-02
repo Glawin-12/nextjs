@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
               node-version: 16
+      - run: cd my-static-website
       - run: npm install 
       - run: npm run build
       - uses: aws-actions/configure-aws-credentials@v1
